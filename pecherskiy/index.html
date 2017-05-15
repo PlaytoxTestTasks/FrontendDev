@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.3.0/lodash.js"></script>
+	<script src="tergetFun.js"></script>
+	<script src="src/device.js"></script>
+</head>
+<body>
+
+<div class="main-page" id="mainPage">
+	<div class="menu">
+		<div class="left-menu">
+    		<div class="menu-block lifes" id="lifesNode">3</div>
+    		<div class="menu-block score" id="scoreNode">0</div>
+    		<div class="menu-block level" id="level">1</div>
+    		<div class="menu-block score-total" id="scoreTotal">0</div>
+    	</div>
+    	<div class="start-game" id="startGm">Start</div>
+	</div>
+	<div class='game-space' id="gameSpace">
+    	<div class="brick" id="brick"></div>
+    	<div class="brick"></div>
+   		<div class="brick"></div>
+    	<div class="brick"></div>
+    	<div class="brick"></div>
+    	<div class="brick"></div>
+    	<div class="brick"></div>
+    	<div class="brick"></div>
+    	<div class="brick"></div>
+    	<div class="brick"></div>
+    	<div class="paddle" id="paddle"></div>
+    	<div class="balls" id="ball"></div>
+    	<div class="block-water water"></div>
+    	<div class="block-water water2"></div>
+	</div>
+</div>
+	<script src="app.js"></script>
+
+<script type="text/template" id="complex-template">
+<div class="block-note <%-classFocus%> <%-classCol%>" id=<%-idBlock%>>
+  <div class="text-block" onclick="focuss(this)" ondblclick="colorChahge(this)" id=<%-idBlockCont%>><%-items%></div>
+  <div class="del-block" onclick="delTask(this, false)" id=<%-idBlockDel%>></div>
+  <div class="background-block"></div>
+</div>
+</script>
+
+</body>
+</html>
